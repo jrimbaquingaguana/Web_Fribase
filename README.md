@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# React Firebase Authentication
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto implementa la autenticación de usuarios utilizando Firebase en una aplicación React. A continuación, se detallan los pasos para configurar y ejecutar el proyecto.
 
-## Available Scripts
+## Configuración del Proyecto en Firebase
 
-In the project directory, you can run:
+1. **Crea un proyecto en Firebase:**
+   - Ve a la [consola de Firebase](https://console.firebase.google.com/) y crea un nuevo proyecto.
+   
+2. **Habilita la autenticación:**
+   - Dentro del proyecto de Firebase, ve a la sección de autenticación y habilita los proveedores de autenticación que necesites (correo electrónico/password, Google, Facebook, etc.).
 
-### `npm start`
+## Configuración del Proyecto React
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Inicia un nuevo proyecto React:**
+   - Utiliza `npx create-react-app my-app` para iniciar un nuevo proyecto si no tienes uno ya creado.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Instala Firebase:**
+   - Ejecuta `npm install firebase` o `yarn add firebase` para añadir Firebase a tu proyecto.
 
-### `npm test`
+3. **Configura Firebase:**
+   - Crea un archivo `firebase.js` en el directorio `src` para configurar Firebase con las credenciales de tu proyecto.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Implementación de Autenticación
 
-### `npm run build`
+1. **Formulario de Inicio de Sesión y Registro:**
+   - Crea componentes React (`Login.js` y `Register.js`) para los formularios de inicio de sesión y registro.
+   - Utiliza los métodos de Firebase para autenticar a los usuarios.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Manejo de Mensajes:**
+   - Implementa la lógica para mostrar mensajes de éxito o error después de intentos de inicio de sesión o registro.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Protección de Rutas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Configura React Router:**
+   - Utiliza `react-router-dom` para definir las rutas de tu aplicación en `App.js`.
 
-### `npm run eject`
+2. **Protección de Rutas:**
+   - Crea un componente `ProtectedRoute.js` para restringir el acceso a ciertas páginas a usuarios no autenticados.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Interfaz de Usuario
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Diseño de los Formularios:**
+   - Diseña interfaces atractivas para los formularios de inicio de sesión y registro, utilizando `App.css` y Tailwind CSS para estilizar los componentes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Retroalimentación al Usuario:**
+   - Asegúrate de proporcionar retroalimentación clara y útil al usuario durante el proceso de autenticación.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Ejecución del Proyecto
 
-## Learn More
+Para ejecutar el proyecto localmente, sigue estos pasos:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Instala las Dependencias:**
+   - Ejecuta `npm install` para instalar todas las dependencias del proyecto.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Inicia el Servidor de Desarrollo:**
+   - Ejecuta `npm start` para iniciar el servidor de desarrollo. Accede a `http://localhost:3000` para ver tu aplicación.
 
-### Code Splitting
+## Dependencias Utilizadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- React 17.0.2
+- Firebase 9.6.4
+- React Router Dom 6.2.1
+- Tailwind CSS 3.0.16
 
-### Analyzing the Bundle Size
+## Estructura del Proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```markdown
+proyectoFirebase/
+├─ public/
+├─ src/
+│  ├─ components/
+│  │  ├─ Alert.js
+│  │  ├─ Home.js
+│  │  ├─ Login.js
+│  │  ├─ ProtectedRoute.js
+│  │  └─ Register.js
+│  ├─ context/
+│  │  └─ AuthContext.js
+│  ├─ img/
+│  ├─ App.css
+│  ├─ App.js
+│  ├─ App.test.js
+│  ├─ firebase.js
+│  ├─ index.css
+│  ├─ index.js
+│  ├─ reportWebVitals.js
+│  └─ setupTests.js
+├─ .gitignore
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.js
+├─ README.md
+└─ tailwind.config.js
+```
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Elaborado por:
+Ricardo Rivadeneira, Jose Imbaquinga
