@@ -5,13 +5,13 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDspa1WpBPE8zTc-7ujYaGg2RunJsB0Fv8",
-  authDomain: "deber-firebase-b1a18.firebaseapp.com",
-  projectId: "deber-firebase-b1a18",
-  storageBucket: "deber-firebase-b1a18.appspot.com",
-  messagingSenderId: "673388433180",
-  appId: "1:673388433180:web:a69e3d5400394ce1ac34d9",
-  measurementId: "G-M5CSXZV2WN"
+  apiKey: "AIzaSyCEgI-BJ5sM19stFtFtQvS4WwIo4oNrIU4",
+  authDomain: "p2parcial.firebaseapp.com",
+  projectId: "p2parcial",
+  storageBucket: "p2parcial.appspot.com",
+  messagingSenderId: "679178906258",
+  appId: "1:679178906258:web:566528c23a5bed3d3f944b",
+  measurementId: "G-JSPNEG4ESW"
 };
 
 // Initialize Firebase
